@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>145.力量之光)(鼠标悬停特效)</title>
+</head>
+<body>
+    <section>
+        <h2>Light</h2>
+    </section>
+    <div class="light"></div>
+    <script>
+        const pos = document.documentElement
+        pos.addEventListener('mousemove',e => {
+            pos.style.setProperty('--x',e.clientX + 'px')
+            pos.style.setProperty('--y',e.clientY + 'px')
+        })
+    </script>
+</body>
+</html>
