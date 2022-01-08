@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="flex 布局体验">
+        <meta name="description" content="flex">
+        <meta name="author" content="李容宇">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;    
+            }
+            div {
+                display: flex;
+                width: 800px;
+                height: 800px;
+                background-color: pink;
+
+                /* ------------------------------------- */
+                /* 默认主轴方向水平向右 */
+                /* flex-direction: row; */
+                /* flex-wrap: wrap; */
+                /* 可以将主轴方向的设置和子元素是否换行的设置进行合写 */
+                /* flex-flow: row  wrap; */
+                flex-flow: column  wrap;
+                /* ------------------------------------- */
+                
+                /* 侧轴整体居中 */
+                align-content: center;
+            }
+            span {
+                width: 250px;
+                height: 100px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                background-color: purple;
+            }
+        </style>       
+    </head>
+    <body>
+        <div>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+        </div>
+    </bod>
+</html>

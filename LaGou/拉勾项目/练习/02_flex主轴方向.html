@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="flex 布局体验">
+        <meta name="description" content="flex">
+        <meta name="author" content="李容宇">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;    
+            }
+            div {
+                display: flex;
+                width: 800px;
+                height: 800px;
+                background-color: pink;
+                /* 默认主轴水平从左往右 */
+                /* flex-direction: row; */
+                /* 主轴为水平从右往左 */
+                /* flex-direction: row-reverse; */
+                /* 主轴为垂直从上往下 */
+                /* flex-direction: column; */
+                /* 主轴为垂直从下往上 */
+                flex-direction: column-reverse;
+            }
+            span {
+                width: 150px;
+                height: 100px;
+                margin-right: 10px;
+                background-color: purple;
+            }
+        </style>       
+    </head>
+    <body>
+        <div>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+    </bod>
+</html>

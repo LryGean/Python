@@ -1,0 +1,364 @@
+/* 初始化样式 */
+body {
+	max-width: 540px;
+	min-width: 320px;
+	margin: 0 auto;
+	font: normal 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft	Yahei",STXihei,hei;
+	color: #000;
+	background: #f2f2f2;
+	overflow-x: hidden;
+	-webkit-tap-highlight-color: transparent;
+}
+ul,li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+h1,h2,h3,h4,h5,h5 {
+  margin: 0;
+  padding: 0;
+}
+/*点击高亮我们需要清除清除 设置为transparent 完成透明*/
+*{
+  -webkit-tap-highlight-color: transparent;
+}
+/*在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式*/
+input{
+  -webkit-appearance: none;
+}
+/*禁用长按页面时的弹出菜单*/
+img,a { -webkit-touch-callout: none; }
+
+.bg {
+  background-color: #fff;
+}
+
+/* 搜索框 */
+.search-index {
+  position: fixed;
+  left: 0;
+  top: 20px;
+  display: flex;
+  width: 100%;
+  height: 44px;
+  padding-left: 500px;
+  padding-right: 500px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+.search-index .search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 28px;
+  padding: 2px 5px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.search-index .search span {
+  position: relative;
+  padding-left: 35px;
+  line-height: 18px;
+  font-size: 15px;
+  color: #666;
+}
+.search-index .search span::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  background: url(../img/sprite.png) no-repeat 0px 0px;
+  background-size: 21px auto;
+}
+.search-index .login {
+  /* 内部进行 flex 布局 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 51px;
+  height: 44px;
+  padding-right: 4px;
+}
+.search-index .login::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url(../img/sprite.png) no-repeat 0 -36px;
+  background-size: 21px auto;
+  order: -1;
+}
+.search-index .login span {
+  font-size: 12px;
+  color: #fff;
+  line-height: 12px;
+}
+
+/* 焦点图 */
+.focus {
+  position: relative;
+  width: 100%;
+  padding: 0 25%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  transform: translateX(-16.6666%);
+  overflow: hidden;
+}
+.focus a {
+  display: block;
+}
+.focus a img {
+  display: block;
+  width: 100%;
+}
+.focus::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.4),rgba(0,0,0,0));
+}
+
+/* local-nav 部分 */
+.local-nav {
+  display: flex;
+  position: relative;
+  height: 64px;
+  padding: 4px 0 8px;
+  margin: -52px 12px 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.local-nav li {
+  flex: 1;
+}
+.local-nav li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.local-nav li a i {
+  width: 40px;
+  height: 40px;
+  background: url(../img/localnav_bg.png) no-repeat 0 0;
+  background-size: 40px auto;
+}
+.local-nav li a span {
+  font-size: 12px;
+}
+.local-nav li:nth-child(2) a i {
+  background-position: 0 -40px;
+}
+.local-nav li:nth-child(3) a i {
+  background-position: 0 -80px;
+}
+.local-nav li:nth-child(4) a i {
+  background-position: 0 -120px;
+}
+.local-nav li:nth-child(5) a i {
+  background-position: 0 -160px;
+}
+
+/* 主导航部分 */
+.nav {
+  margin: 0 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.nav .nav-common {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  background-image: linear-gradient(to right,#4b8fed,#53bced);
+}
+.nav .nav-common:nth-child(3) {
+  border-bottom: 0;
+}
+.nav .nav-common a {
+  padding: 25.6px 0;
+  line-height: 14px;
+  color:  #fff;
+  box-sizing: border-box;
+}
+.nav .nav-common a:nth-child(1) {
+  flex: 1.347;
+  padding-left: 12px;
+  background: url(../img/flight.png) no-repeat right bottom;
+  background-size: auto 34px;
+}
+.nav .nav-common a:nth-child(2) {
+  background: url(../img/train.png) no-repeat left bottom;
+  background-size: 37px auto;
+}
+.nav .nav-common a:nth-child(n+2) {
+  flex: 1;
+  border-left: 1px solid #fff;
+  text-align: center;
+}
+/* 添加导航中不同的样式部分 */
+.nav .nav-common:nth-child(1) {
+  background-image: linear-gradient(to right,#fa5a56,#fb8550 56%);
+}
+.nav .nav-common:nth-child(1) a:nth-child(3) {
+  flex: 2;
+  background-image: url(../img/hot_sale.png),linear-gradient(to right,#ffbc49,#ffd252);
+  background-size: 161px auto;
+  background-position: right bottom;
+  color: #A05416;
+}
+.nav .nav-common:nth-child(1) a:nth-child(1) {
+  background-image: url(../img/hotel.png);
+  background-size: 73px auto;
+}
+.nav .nav-common:nth-child(1) a:nth-child(2) {
+  background-image: url(../img/minsu.png);
+}
+.nav .nav-common:nth-child(3) {
+  background-image: linear-gradient(to right,#34c2aa,#6cd557);
+}
+.nav .nav-common:nth-child(3) a:nth-child(1) {
+  background-image: url(../img/travel.png);
+  background-size: auto 47px;
+}
+.nav .nav-common:nth-child(3) a:nth-child(2) {
+  background-image: url(../img/dingzhi.png);
+  background-size: 61px auto;
+}
+
+/* subnav-entry 部分 */
+.subnav-entry {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 12px 12px;
+}
+.subnav-entry li {
+  width: 20%;
+}
+.subnav-entry li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  line-height: 12px;
+}
+.subnav-entry li a i {
+  width: 28px;
+  height: 28px;
+  margin: 10px 0 5px;
+  background: url(../img/subnav-bg.png) no-repeat 6px -137px;
+  background-size: 24px auto;
+}
+/* 热门活动区域 */
+.sales-box {
+  border-top: 1px solid #dbdbdb;
+}
+.sales-box .sales-hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  padding: 0 8px 1px;
+  border-bottom: 1px solid #dbdbdb;
+  background-color: #fff;
+}
+.sales-box .sales-hd h2 {
+  position: relative;
+  width: 79px;
+  height: 15px;
+  background: url(../img/hot.png) no-repeat 0 -20px;
+  background-size: 79px auto;
+}
+.sales-box .sales-hd h2 i {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  width: 36px;
+  height: 15px;
+  background: url(../img/icon-gg@2x.png) no-repeat;
+  background-size: 36px auto;
+}
+.sales-box .sales-hd .more {
+  position: relative;
+  height: 20px;
+  padding: 0 18px 0 12px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right,#dc5569,#e068c4);
+  font-size: 12px;
+  color: white;
+}
+.sales-box .sales-hd .more::after {
+  position: absolute;
+  right: 9px;
+  top: 5px;
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+.sales-box .sales-bd {
+  display: flex;
+  width: 100%;
+}
+.sales-box .sales-bd a {
+  flex: 1;
+  position: relative;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+.sales-box .sales-bd a:nth-child(1) {
+  border-right: 1px solid #fafafa;
+}
+.sales-box .sales-bd a img {
+  display: block;
+  width: 100%;
+}
+.sales-box .sales-bd a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 26px;
+  height: 14px;
+  border-top-right-radius: 4px;
+  background-color: #b3b3b3;
+  color: white;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.a1 {
+  display: flex;
+  width: 500px;
+  height: 25px;
+  justify-content: space-around;
+}
+.a1 span {
+  background-size: 25px;
+}
+
+.a2 {
+  display: flex;
+  width: 500px;
+  height: 25px;
+  justify-content: space-around;
+}
+.aa {
+  background-color: #fff;
+}

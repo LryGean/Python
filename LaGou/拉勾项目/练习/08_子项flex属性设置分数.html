@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="flex 布局体验">
+        <meta name="description" content="flex">
+        <meta name="author" content="李容宇">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;    
+            }
+            section {
+                display: flex;
+                width: 60%;
+                height: 80px;
+                /* 上下50px,auto:左右居中 */
+                margin: 50px auto; 
+                background-color: pink;   
+            }
+            section div:nth-child(1),section div:nth-child(3) {
+                width: 80px;
+                height: 80px;
+                background-color: skyblue;
+            }
+            section div:nth-child(2) {
+                flex: 1;
+                height: 80px;
+                background-color: green;
+            }
+            .box {
+                display: flex;
+                width: 60%;
+                height: 80px;
+                background-color: pink;
+                margin: 0 auto;
+            }
+            .box span {
+                flex: 1;
+            }
+            .box span:nth-child(2) {
+                flex: 2;
+                background-color: purple;
+            }
+        </style>       
+    </head>
+    <body>
+        <section>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </section>
+        <div class="box">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+    </bod>
+</html>
