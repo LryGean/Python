@@ -1,0 +1,29 @@
+什么是JSON？
+JavaScript Object Notation
+字面意思：JavaScript 对象标记
+是一种轻量级数据*交换格式*————>与XML作比较
+
+字符串是JSON的表现形式
+
+JSON字符串：符合JSON格式的字符串   例：{"name":"qiyue"}
+
+
+易于阅读
+
+易于解析         跨语言交换数据
+
+网络传输效率高
+
+
+****数据格式****
+
+
+
+JSON 对象
+
+JSON ：是 ECMASCRIPT W3C制定的的脚本的规范与实现  （ActionScript JSON Typescript JavaScript）
+
+JSON字符串
+
+
+JSON符合REST服务的数据格式
