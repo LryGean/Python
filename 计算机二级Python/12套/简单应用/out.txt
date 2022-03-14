@@ -1,0 +1,21 @@
+starting,0.000037,2.102
+After opening tables,0.000008,0.455
+System lock,0.000004,0.227
+Table lock,0.000008,0.455
+init,0.000009,0.511
+optimizing,0.000008,0.455
+statistics,0.000014,0.795
+preparing,0.000016,0.909
+executing,0.000005,0.284
+Filling schema table,0.00081,46.023
+executing,0.00001,0.568
+Sending data,0.00065,36.932
+end,0.000017,0.966
+query end,0.000009,0.511
+closing tables,0.000005,0.284
+removing tmp table,0.000049,2.784
+closing tables,0.000007,0.398
+Unlocking tables,0.000007,0.398
+freeing items,0.000007,0.398
+updating status,0.000036,2.045
+cleaning up,0.000008,0.455
