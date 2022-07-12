@@ -1,0 +1,176 @@
+# 开启服务
+redis-server
+# 客户端连接 
+redis-cli
+# redis-cli --raw
+
+select 1    // 选择数据库1
+
+set key    value
+set name Chenfan
+
+//      key   过期时间  value
+setex age    10          18
+
+// 获取值
+get key
+get name
+
+// 查看所有键
+keys *
+key a1
+
+
+// 多键值对添加
+mset a1 1 a2 2 a3 3
+
+// 多键查询值
+mget a2 a3
+
+// 查询是key否存在
+exists a1
+
+// 通过key查看value类型
+type a2
+
+// ttl a1
+-1表示存在
+其他表示过期时间
+
+// 通过key删除
+del name
+
+// incr默认自增1
+incr a2
+// 指定自增值
+incrby a2 2
+
+// decr默认自减1
+decr a2
+// 指定自减值
+decrby a2 2
+
+// 获取键名范围
+getname key    start end
+getname name   0     1
+
+// key名范围覆盖
+setrange name start    覆盖部分的key名
+setrange name    0      LinFei
+
+# 从左侧插入
+# 插入列表
+lpush key value
+lpush name LinFei ChenfFan
+
+# 从右侧插入
+rpush key value
+rpush lyp six six1 six2
+
+# 查询
+# 只有lrange 查询方法
+lrange key start stop
+lrange name 0 -1   # 查询全部
+
+#插入
+# 在指定元素前或后差入数据
+linsert key BEFORE|AFTER pivot value
+linsert lyp after six  99 
+
+# 修改
+lset key index value
+lset lyp 1 six0
+
+# 删除
+lrem key count value
+# count = 0 删除所有元素
+lrem lyp 0 six1
+# count > 0 从头删除
+lrem lyp 2 six1   # 2表示删除2个
+#count < 0 从尾删除
+
+# 哈希 （字典嵌套）
+#设置单个属性
+hset user name LinFei
+# 设置多个属性
+hmset user age 18 class 1
+
+# 查询
+# hkeys key
+hkeys user
+获取一个属性的值
+# hget key field
+hget user name
+
+#获取多个属性的值
+# hmget key field [field ...]
+hmget user name age class
+
+# 获取所有属性的值
+# hvals key
+hvals user
+
+# 删除
+# 万能删除法
+del user 
+
+# 删除某一个属性
+# hdel key field [field ...]
+hdel user class
+ 
+
+# set
+# 添加元素 
+# sadd key member [member ...]
+sadd u1 LinFei ChenFan
+
+# 查询
+# smembers key
+smembers u1   # 查询集合里的所有元素
+#查询集合里的元素个数
+scard set01
+
+#删除del
+# 删除指定的元素
+# srem key member [member ...]
+srem u1 LinFei
+
+# 随机删除指定个数的元素
+spop u1 2  # 2表示删除两个
+
+# 判断某一个元素是否存在
+# sismember key member
+sismember u1 Gean  # 1表示存在，0表示不存在
+
+# 移动
+# smove source destination member
+smove u2 u1 1 # 把u2里的1移动到u1里
+
+
+# zset  
+# 有序 
+# string
+# 不重复
+# 每个元素都关联一个score表示权重，通过权重进行排序
+# zadd key [NX|XX] [CH] [INCR] score member [score member]
+zadd u3 4 lisi 5 wangwu 6 zhouli 3 zhangsan
+
+# 返回指定范围内的元素
+zrange key start stop [WITHSCORES]
+zrange u3 0 -1
+
+# 返回权重范围的元素
+# zrangebyscore key min max [WITHSCORES] [LIMIT offset  
+zrangebyscore u3 3 5
+
+# 返回某个成员的权重值
+# zscore key member
+zscore u3 wangwu
+
+# 删除
+# zrem key member [member ...]
+zrem u3 zhangsan
+
+# 通过权重值删除
+# zremrangebyscore key min max
+zremrangebyscore u3 3 5
